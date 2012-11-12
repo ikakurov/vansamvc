@@ -1,8 +1,9 @@
 <?php
 //SET The DB username
-$db['host'] = "";
-
-$db['username'] = "";
-$db['userpass'] = "";
-$db['select_db'] = "";
-$db['set_charset'] = "";
+$conf['db']= array(
+   'host'=>"localhost", 
+   'user'=>"root", 
+   'pass'=>"manolito1987", 
+   'dbname'=>"classicmodels", 
+    'shcema'=>'mysql'
+);
