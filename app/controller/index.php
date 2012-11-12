@@ -10,7 +10,8 @@ class Index extends \system\core\Controller {
 
     public function index() {
         $data['title'] = 'title';
-      $this->load->view('index',$data);
+        $this->load->model('model');
+        $this->load->view('index', $data);
     }
 
 }

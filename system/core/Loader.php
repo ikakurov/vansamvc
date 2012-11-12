@@ -10,12 +10,11 @@ class Loader {
 
 final   public function __call($name, $arguments) {
         $namespace = "app" . "\\" . strtolower($name);
-        $class = array_shift(ucfirst(strtolower($arguments)));
+        $class = ucfirst(strtolower(array_shift($arguments)));
         $includeClass = $namespace . "\\" . $class;
         $registry = Registry::getInstance();
         if (isset($arguments)) {
-
-            $registry->$class = new $includeClass($arguments);
+          return  $registry->$class = new $includeClass($arguments);
         } else {
             return $registry->$class = new $includeClass();
         }
