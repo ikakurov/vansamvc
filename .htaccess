@@ -3,4 +3,4 @@ RewriteEngine On
 #RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?/$1 [L] 
+RewriteRule !\.(js|ico|txt|gif|jpg|jpeg|png|css|php|swf|flv|html|txt|doc|pdf)$ index.php [L] 

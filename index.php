@@ -6,8 +6,7 @@ error_reporting(E_ALL);
 try {
 
     /**
-     * @todo CREATE PREMMISION STRUCTURE AND CRUD OR DATE MAPPER CLASS
-     * @todo RENDER THE VIEW AND CECHE AND BUFFERNING 
+     * @todo CREATE PREMMISION STRUCTURE 
      * DEFINE HTTP CONSTANTS
      */
     if (!function_exists('bootstrapLoader')) {

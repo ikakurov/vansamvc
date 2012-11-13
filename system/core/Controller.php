@@ -7,19 +7,19 @@ namespace system\core;
  */
 abstract class Controller {
 
-    protected $load,
-            $registry;
+    protected $load, $registry;
 
-    function __constructor() {
-        $this->load = new Loader();
-        $this->registry = Registry::getInstance();
+    public function __constructor() {
+        $this->registry = Registry::getInstance();  
+        $this->load  = new Load();
+        
     }
 
     abstract function index();
 
-    final public function __get($name) {
-        if ($retunr = $this->registry->$name) {
-            return $retunr;
+    final public function __get($name) {     
+        if ($return = $this->registry->$name) {
+            return $return;
         }
     }
 

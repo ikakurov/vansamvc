@@ -27,7 +27,8 @@ class Registry {
         throw new \Exception("The method __get/__set is broken in registry <hr/> ");
     }
     public final function __set($name, $value) {
-        $this->_args[$name] = $value;
+        //for load class confert string to lower case
+        $this->_args[strtolower($name)] = $value;
     }
 
 }
